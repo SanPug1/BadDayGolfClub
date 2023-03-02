@@ -5,6 +5,8 @@ signal hit
 export var speed = 0.25
 var screen_size = Vector2.ZERO
 
+# Vivek was here
+
 func _ready():
 	screen_size = get_viewport_rect().size
 
