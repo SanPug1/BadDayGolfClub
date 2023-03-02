@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://golfbackgroundupdated.bmp" type="Texture" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://cart2.gd" type="Script" id=3]
 [ext_resource path="res://Cart3.gd" type="Script" id=4]
 [ext_resource path="res://returnCart.gd" type="Script" id=5]
+[ext_resource path="res://Events.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.6702, 45.7313 )
@@ -21,6 +22,98 @@ texture = ExtResource( 1 )
 expand = true
 stretch_mode = 1
 
+[node name="Events" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.474289, 0.496948 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.331436, 0.481003 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.324997, 0.703995 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.936432, 0.791 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.754288, 0.921997 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.608574, 0.906998 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.340714, 0.921005 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.202141, 0.927994 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.0550003, 0.699997 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events10" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.0550003, 0.350998 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events11" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.940712, 0.654007 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events12" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.776428, 0.761002 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events13" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.622147, 0.722 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events14" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.190712, 0.770996 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events15" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.470718, 0.656998 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events16" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.777145, 0.108002 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events17" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.858574, 0.242996 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events18" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.796417, 0.358002 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events19" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.777855, 0.494003 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events20" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.622856, 0.496994 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events21" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.190002, 0.507996 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events22" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.945717, 0.332001 )
+scale = Vector2( 0.003, 0.003 )
+
+[node name="Events23" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.182858, 0.315002 )
+scale = Vector2( 0.003, 0.003 )
+
 [node name="Cart" parent="." instance=ExtResource( 2 )]
 position = Vector2( 0.571442, 0.0770035 )
 scale = Vector2( 0.001, 0.001 )
@@ -35,10 +128,11 @@ position = Vector2( 0.877136, 0.942017 )
 scale = Vector2( 0.001, 0.001 )
 script = ExtResource( 4 )
 
-[node name="CartReturn" type="Area2D" parent="."]
-position = Vector2( 0.0264286, 0.348 )
+[node name="CartReturn" type="Area2D" parent="Cart3"]
+position = Vector2( -850.707, -594.017 )
+scale = Vector2( 1000, 1000 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CartReturn"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cart3/CartReturn"]
 position = Vector2( 0.609314, -0.17598 )
 rotation = 3.1381
 scale = Vector2( 0.001, 0.000999999 )
@@ -46,6 +140,29 @@ shape = SubResource( 1 )
 one_way_collision_margin = 0.0
 script = ExtResource( 5 )
 
-[connection signal="area_shape_entered" from="Cart" to="CartReturn/CollisionShape2D" method="_on_Cart_area_shape_entered"]
-[connection signal="area_shape_entered" from="Cart2" to="CartReturn/CollisionShape2D" method="_on_Cart2_area_shape_entered"]
-[connection signal="area_shape_entered" from="Cart3" to="CartReturn/CollisionShape2D" method="_on_Cart3_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events" to="Events" method="_on_Events_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events2" to="Events2" method="_on_Events2_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events3" to="Events3" method="_on_Events3_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events4" to="Events4" method="_on_Events4_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events5" to="Events5" method="_on_Events5_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events6" to="Events6" method="_on_Events6_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events7" to="Events7" method="_on_Events7_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events8" to="Events8" method="_on_Events8_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events9" to="Events9" method="_on_Events9_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events10" to="Events10" method="_on_Events10_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events11" to="Events11" method="_on_Events11_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events12" to="Events12" method="_on_Events12_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events13" to="Events13" method="_on_Events13_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events14" to="Events14" method="_on_Events14_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events15" to="Events15" method="_on_Events15_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events16" to="Events16" method="_on_Events16_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events17" to="Events17" method="_on_Events17_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events18" to="Events18" method="_on_Events18_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events19" to="Events19" method="_on_Events19_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events20" to="Events20" method="_on_Events20_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events21" to="Events21" method="_on_Events21_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events22" to="Events22" method="_on_Events22_area_shape_entered"]
+[connection signal="area_shape_entered" from="Events23" to="Events23" method="_on_Events23_area_shape_entered"]
+[connection signal="area_shape_entered" from="Cart" to="Cart3/CartReturn/CollisionShape2D" method="_on_Cart_area_shape_entered"]
+[connection signal="area_shape_entered" from="Cart2" to="Cart3/CartReturn/CollisionShape2D" method="_on_Cart2_area_shape_entered"]
+[connection signal="area_shape_entered" from="Cart3" to="Cart3/CartReturn/CollisionShape2D" method="_on_Cart3_area_shape_entered"]
