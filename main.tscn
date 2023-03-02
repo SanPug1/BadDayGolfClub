@@ -1,26 +1,32 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://golfbackgroundupdated.bmp" type="Texture" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://cart2.gd" type="Script" id=3]
 [ext_resource path="res://Cart3.gd" type="Script" id=4]
+[ext_resource path="res://returnCart.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10.6702, 45.7313 )
 
 [node name="main" type="Node2D"]
 scale = Vector2( 1400, 1000 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 1.0
-margin_bottom = 1.0
+margin_left = 0.00142857
+margin_top = 0.00200001
+margin_right = 1.00143
+margin_bottom = 1.002
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 1
 
 [node name="Cart" parent="." instance=ExtResource( 2 )]
-position = Vector2( 0.472858, 0.649048 )
+position = Vector2( 0.571442, 0.0770035 )
 scale = Vector2( 0.001, 0.001 )
 
 [node name="Cart2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 0.934265, 0.492004 )
+position = Vector2( 0.927124, 0.495003 )
 scale = Vector2( 0.001, 0.001 )
 script = ExtResource( 3 )
 
@@ -28,3 +34,18 @@ script = ExtResource( 3 )
 position = Vector2( 0.877136, 0.942017 )
 scale = Vector2( 0.001, 0.001 )
 script = ExtResource( 4 )
+
+[node name="CartReturn" type="Area2D" parent="."]
+position = Vector2( 0.0264286, 0.348 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CartReturn"]
+position = Vector2( 0.609314, -0.17598 )
+rotation = 3.1381
+scale = Vector2( 0.001, 0.000999999 )
+shape = SubResource( 1 )
+one_way_collision_margin = 0.0
+script = ExtResource( 5 )
+
+[connection signal="area_shape_entered" from="Cart" to="CartReturn/CollisionShape2D" method="_on_Cart_area_shape_entered"]
+[connection signal="area_shape_entered" from="Cart2" to="CartReturn/CollisionShape2D" method="_on_Cart2_area_shape_entered"]
+[connection signal="area_shape_entered" from="Cart3" to="CartReturn/CollisionShape2D" method="_on_Cart3_area_shape_entered"]

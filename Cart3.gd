@@ -6,6 +6,7 @@ export var speed = 0.25
 var screen_size = Vector2.ZERO
 var cartSpawn = -1
 var moveable = false
+var parked = false
 
 
 
@@ -23,7 +24,7 @@ func _ready():
 
 func _process(delta):
 	var velocity = Vector2.ZERO
-	if Input.is_action_pressed("ui_3"):
+	if Input.is_action_pressed("ui_3") && parked == false :
 		moveable = true	
 	elif Input.is_action_pressed("ui_2") || Input.is_action_pressed("ui_1"): 
 		moveable = false
@@ -61,3 +62,8 @@ func _process(delta):
 func start(new_position):
 	position = new_position
 	show()
+
+
+func _on_CollisionShape2D_returnLineTrigger():
+	hide()
+	pass # Replace with function body.

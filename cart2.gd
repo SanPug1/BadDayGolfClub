@@ -6,7 +6,7 @@ export var speed = 0.25
 var screen_size = Vector2.ZERO
 var cartSpawn = -1;
 var moveable = false;
-
+var parked = false
 
 
 func _ready():
@@ -23,7 +23,7 @@ func _ready():
 
 func _process(delta):
 	var velocity = Vector2.ZERO
-	if Input.is_action_pressed("ui_2"):
+	if Input.is_action_pressed("ui_2") && parked == false :
 		moveable = true
 	elif Input.is_action_pressed("ui_1") || Input.is_action_pressed("ui_3"): 
 		moveable = false	
