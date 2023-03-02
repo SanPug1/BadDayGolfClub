@@ -5,7 +5,7 @@ signal hit
 export var speed = 0.25
 var screen_size = Vector2.ZERO
 var cartSpawn = -1
-var moveable = false 
+var moveable = false
 
 
 
@@ -14,20 +14,19 @@ func _ready():
 	randomize()
 	cartSpawn = randi() % 2
 	if cartSpawn == 0: 
-		position.x = 0.063
-		position.y = 0.132
+		position.x = 0.906
+		position.y = 0.921
 	else: 
-		position.x = 0.054
-		position.y = 0.538
+		position.x = 0.934
+		position.y = 0.492
 	
 
 func _process(delta):
 	var velocity = Vector2.ZERO
-	
-	if Input.is_action_pressed("ui_1"):
-		moveable = true
-	elif Input.is_action_pressed("ui_2") || Input.is_action_pressed("ui_3"): 
-		moveable = false	
+	if Input.is_action_pressed("ui_3"):
+		moveable = true	
+	elif Input.is_action_pressed("ui_2") || Input.is_action_pressed("ui_1"): 
+		moveable = false
 	
 	if moveable == true: 
 		if Input.is_action_pressed("ui_right"):

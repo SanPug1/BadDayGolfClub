@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://golfbackgroundupdated.bmp" type="Texture" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://cart2.gd" type="Script" id=3]
+[ext_resource path="res://Cart3.gd" type="Script" id=4]
 
 [node name="main" type="Node2D"]
 scale = Vector2( 1400, 1000 )
@@ -14,5 +16,15 @@ expand = true
 stretch_mode = 1
 
 [node name="Cart" parent="." instance=ExtResource( 2 )]
-position = Vector2( 0.475006, 0.0660095 )
+position = Vector2( 0.472858, 0.649048 )
 scale = Vector2( 0.001, 0.001 )
+
+[node name="Cart2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0.934265, 0.492004 )
+scale = Vector2( 0.001, 0.001 )
+script = ExtResource( 3 )
+
+[node name="Cart3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0.877136, 0.942017 )
+scale = Vector2( 0.001, 0.001 )
+script = ExtResource( 4 )
