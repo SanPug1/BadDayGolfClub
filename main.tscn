@@ -22,6 +22,18 @@ texture = ExtResource( 1 )
 expand = true
 stretch_mode = 1
 
+[node name="CartReturn" type="Area2D" parent="."]
+position = Vector2( 0.0264289, 0.348 )
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CartReturn"]
+position = Vector2( 0.609314, -0.17598 )
+rotation = 3.1381
+scale = Vector2( 0.001, 0.000999999 )
+shape = SubResource( 1 )
+one_way_collision_margin = 0.0
+script = ExtResource( 5 )
+
 [node name="Events" parent="." instance=ExtResource( 6 )]
 position = Vector2( 0.474289, 0.496948 )
 scale = Vector2( 0.003, 0.003 )
@@ -128,18 +140,6 @@ position = Vector2( 0.877136, 0.942017 )
 scale = Vector2( 0.001, 0.001 )
 script = ExtResource( 4 )
 
-[node name="CartReturn" type="Area2D" parent="Cart3"]
-position = Vector2( -850.707, -594.017 )
-scale = Vector2( 1000, 1000 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cart3/CartReturn"]
-position = Vector2( 0.609314, -0.17598 )
-rotation = 3.1381
-scale = Vector2( 0.001, 0.000999999 )
-shape = SubResource( 1 )
-one_way_collision_margin = 0.0
-script = ExtResource( 5 )
-
 [connection signal="area_shape_entered" from="Events" to="Events" method="_on_Events_area_shape_entered"]
 [connection signal="area_shape_entered" from="Events2" to="Events2" method="_on_Events2_area_shape_entered"]
 [connection signal="area_shape_entered" from="Events3" to="Events3" method="_on_Events3_area_shape_entered"]
@@ -163,6 +163,6 @@ script = ExtResource( 5 )
 [connection signal="area_shape_entered" from="Events21" to="Events21" method="_on_Events21_area_shape_entered"]
 [connection signal="area_shape_entered" from="Events22" to="Events22" method="_on_Events22_area_shape_entered"]
 [connection signal="area_shape_entered" from="Events23" to="Events23" method="_on_Events23_area_shape_entered"]
-[connection signal="area_shape_entered" from="Cart" to="Cart3/CartReturn/CollisionShape2D" method="_on_Cart_area_shape_entered"]
-[connection signal="area_shape_entered" from="Cart2" to="Cart3/CartReturn/CollisionShape2D" method="_on_Cart2_area_shape_entered"]
-[connection signal="area_shape_entered" from="Cart3" to="Cart3/CartReturn/CollisionShape2D" method="_on_Cart3_area_shape_entered"]
+[connection signal="area_shape_entered" from="Cart" to="CartReturn/CollisionShape2D" method="_on_Cart_area_shape_entered"]
+[connection signal="area_shape_entered" from="Cart2" to="CartReturn/CollisionShape2D" method="_on_Cart2_area_shape_entered"]
+[connection signal="area_shape_entered" from="Cart3" to="CartReturn/CollisionShape2D" method="_on_Cart3_area_shape_entered"]
