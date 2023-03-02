@@ -41,9 +41,10 @@ func _process(delta):
 		$AnimatedSprite.flip_h = velocity.x > 0
 		$AnimatedSprite.flip_v = false
 	elif velocity.y != 0:
-		$AnimatedSprite.animation = "up"
-		$AnimatedSprite.flip_v = velocity.y > 0
-		$AnimatedSprite.flip_h = false
+		if velocity.y > 0:
+			$AnimatedSprite.animation = "down"
+		elif velocity.y < 0:
+			$AnimatedSprite.animation = "up"
 
 func start(new_position):
 	position = new_position
