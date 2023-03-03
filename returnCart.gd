@@ -1,5 +1,4 @@
 extends CollisionShape2D
-signal returnLineTrigger
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -24,6 +23,7 @@ func _on_Cart3_area_shape_entered(area_rid, area, area_shape_index, local_shape_
 		get_node("/root/main/Cart3").position.y = 0.075
 		get_node("/root/main/Cart3").moveable = false 
 		get_node("/root/main/Cart3").parked = true 
+
 
 
 

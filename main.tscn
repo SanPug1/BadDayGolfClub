@@ -6,8 +6,8 @@
 [ext_resource path="res://Cart3.gd" type="Script" id=4]
 [ext_resource path="res://returnCart.gd" type="Script" id=5]
 [ext_resource path="res://Events.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Grass.gd" type="Script" id=7]
-[ext_resource path="res://GameBorder.gd" type="Script" id=8]
+[ext_resource path="res://fonts/kirifont/Kirifont.tres" type="DynamicFont" id=7]
+[ext_resource path="res://movingPerson.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.6702, 45.7313 )
@@ -23,6 +23,9 @@ margin_bottom = 0.999
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 1
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CartReturn" type="Area2D" parent="."]
 position = Vector2( 0.0264289, 0.348 )
@@ -128,16 +131,16 @@ position = Vector2( 0.182858, 0.315002 )
 scale = Vector2( 0.003, 0.003 )
 
 [node name="Cart" parent="." instance=ExtResource( 2 )]
-position = Vector2( 0.571442, 0.0770035 )
+position = Vector2( 0.571442, 0.0719604 )
 scale = Vector2( 0.001, 0.001 )
 
 [node name="Cart2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 0.927124, 0.495003 )
+position = Vector2( 0.470703, 0.0769958 )
 scale = Vector2( 0.001, 0.001 )
 script = ExtResource( 3 )
 
 [node name="Cart3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 0.877136, 0.942017 )
+position = Vector2( 0.371429, 0.0769958 )
 scale = Vector2( 0.001, 0.001 )
 script = ExtResource( 4 )
 
@@ -170,6 +173,22 @@ script = ExtResource( 8 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GameBorder"]
 polygon = PoolVector2Array( 0.330714, -0.002, 0.329286, 0.281, 0.62, 0.286, 0.619286, -0.004, 1, -0.003, 0.995714, 1.001, -0.00285714, 1.006, -0.0607143, 1.123, 1.07571, 1.117, 1.085, -0.091 )
+
+[node name="BasicInstruct" type="Label" parent="."]
+margin_left = -0.00570679
+margin_top = 0.00800323
+margin_right = 321.994
+margin_bottom = 33.008
+rect_scale = Vector2( 0.001, 0.002 )
+custom_fonts/font = ExtResource( 7 )
+text = "Drive 3 carts to the parking lot "
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="movingPerson" parent="." instance=ExtResource( 8 )]
+position = Vector2( 0.474304, 0.247986 )
+scale = Vector2( 0.001, 0.001 )
 
 [connection signal="area_shape_entered" from="Events" to="Events" method="_on_Events_area_shape_entered"]
 [connection signal="area_shape_entered" from="Events2" to="Events2" method="_on_Events2_area_shape_entered"]

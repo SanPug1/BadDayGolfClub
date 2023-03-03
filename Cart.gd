@@ -1,7 +1,5 @@
 extends Area2D
 
-signal hit
-
 export var speed = 0.25
 var screen_size = Vector2.ZERO
 var cartSpawn = -1
