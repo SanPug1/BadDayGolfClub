@@ -7,7 +7,7 @@ var affectedcart = ""
 
 func _ready():
 	pass
-
+#hi
 func _on_TurboTimer_timeout():
 	get_node("/root/main/Cart").speed = ogspeed
 	get_node("/root/main/Cart2").speed = ogspeed
