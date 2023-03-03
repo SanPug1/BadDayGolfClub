@@ -20,7 +20,7 @@ var og = 0.987759
 
 
 func _on_Cart_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
-	if str(area) == "GameBorder:[Area2D:1462]":
+	if str(area).split(":")[0] == "GameBorder":
 		print(get_node("/root/main/Cart").speed)
 		og = get_node("/root/main/Cart").speed
 		get_node("/root/main/Cart").speed=og * (-1)
@@ -34,7 +34,7 @@ func _on_Cart_area_shape_entered(area_rid, area, area_shape_index, local_shape_i
 		
 
 func _on_Cart2_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
-	if str(area) == "GameBorder:[Area2D:1462]":
+	if str(area).split(":")[0] == "GameBorder":
 		print(get_node("/root/main/Cart2").speed)
 		og = get_node("/root/main/Cart2").speed
 		get_node("/root/main/Cart2").speed=og * (-1)
@@ -49,7 +49,7 @@ func _on_Cart2_area_shape_entered(area_rid, area, area_shape_index, local_shape_
 
 
 func _on_Cart3_area_shape_entered(area_rid, area, area_shapeindex, local_shape_index):
-	if str(area) == "GameBorder:[Area2D:1462]":
+	if str(area).split(":")[0] == "GameBorder":
 		print(get_node("/root/main/Cart3").speed)
 		og = get_node("/root/main/Cart3").speed
 		get_node("/root/main/Cart3").speed=og * (-1)
