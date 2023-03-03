@@ -33,6 +33,9 @@ func eventgenerator():
 		elif affectedcart == "Cart3:[Area2D:1407]":
 			if get_node("/root/main/Cart3").dirt < 3:
 				get_node("/root/main/Cart3").dirt += 1
+		print(get_node("/root/main/Cart").dirt)
+		print(get_node("/root/main/Cart2").dirt)
+		print(get_node("/root/main/Cart3").dirt)
 	elif (eventnumber == 4 and $AnimatedSprite.animation == "default") or ($AnimatedSprite.animation == "Water"):
 		$AnimatedSprite.animation = "Water"
 		if affectedcart == "Cart:[Area2D:1401]":

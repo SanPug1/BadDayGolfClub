@@ -21,6 +21,7 @@ func _ready():
 		position.x = 0.477
 		position.y = 0.892
 	
+var dirtmod = 1
 
 func _process(delta):
 	var velocity = Vector2.ZERO
@@ -45,7 +46,16 @@ func _process(delta):
 		else:
 			$AnimatedSprite.stop()
 		
-		position += velocity * speed * delta
+		if dirt == 1:
+			dirtmod = 0.75
+		if dirt == 2:
+			dirtmod = 0.6
+		if dirt == 3:
+			dirtmod = 0.45
+		if dirt == 0:
+			dirtmod = 1
+		
+		position += velocity * speed * delta * dirtmod
 		position.x = clamp(position.x,0,screen_size.x)
 		position.y = clamp(position.y,0,screen_size.y)
 		
