@@ -6,10 +6,17 @@
 [ext_resource path="res://Cart3.gd" type="Script" id=4]
 [ext_resource path="res://returnCart.gd" type="Script" id=5]
 [ext_resource path="res://Events.tscn" type="PackedScene" id=6]
+<<<<<<< Updated upstream
 [ext_resource path="res://Grass.gd" type="Script" id=7]
 [ext_resource path="res://GameBorder.gd" type="Script" id=8]
 [ext_resource path="res://movingPerson.tscn" type="PackedScene" id=9]
 [ext_resource path="res://fonts/kirifont/Kirifont.tres" type="DynamicFont" id=10]
+=======
+[ext_resource path="res://fonts/kirifont/Kirifont.tres" type="DynamicFont" id=7]
+[ext_resource path="res://movingPerson.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Button.gd" type="Script" id=9]
+[ext_resource path="res://X2Download.app - Mario Kart Race Start - Sound Effect (HD) (128 kbps).mp3" type="AudioStream" id=10]
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.6702, 45.7313 )
@@ -176,13 +183,23 @@ script = ExtResource( 8 )
 polygon = PoolVector2Array( 0.330714, -0.002, 0.329286, 0.281, 0.62, 0.286, 0.619286, -0.004, 1, -0.003, 0.995714, 1.001, -0.00285714, 1.006, -0.0607143, 1.123, 1.07571, 1.117, 1.085, -0.091 )
 
 [node name="BasicInstruct" type="Label" parent="."]
-margin_left = -0.00570679
-margin_top = 0.00800323
-margin_right = 321.994
-margin_bottom = 33.008
+anchor_bottom = 0.303
+margin_top = 0.07
+margin_right = 323.0
+margin_bottom = 39.07
 rect_scale = Vector2( 0.001, 0.002 )
+<<<<<<< Updated upstream
 custom_fonts/font = ExtResource( 10 )
 text = "Drive 3 carts to the parking lot "
+=======
+custom_fonts/font = ExtResource( 7 )
+text = "
+
+
+
+
+Drive 3 carts to the parking lot "
+>>>>>>> Stashed changes
 __meta__ = {
 "_edit_lock_": true
 }
@@ -190,6 +207,19 @@ __meta__ = {
 [node name="movingPerson" parent="." instance=ExtResource( 9 )]
 position = Vector2( 0.474304, 0.247986 )
 scale = Vector2( 0.001, 0.001 )
+
+[node name="Button" type="Button" parent="."]
+margin_right = 12.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.003, 0.003 )
+text = "START"
+script = ExtResource( 9 )
+
+[node name="marioakartsound" type="AudioStreamPlayer2D" parent="Button"]
+stream = ExtResource( 10 )
+
+[node name="marioakartsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 10 )
 
 [connection signal="area_shape_entered" from="Events" to="Events" method="_on_Events_area_shape_entered"]
 [connection signal="area_shape_entered" from="Events2" to="Events2" method="_on_Events2_area_shape_entered"]
