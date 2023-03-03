@@ -8,7 +8,6 @@ var cartSpawn = -1;
 var moveable = false;
 var parked = false
 var dirt = 0
-var button=false
 
 
 func _ready():
@@ -26,7 +25,7 @@ var dirtmod = 1
 
 func _process(delta):
 	var velocity = Vector2.ZERO
-	if Input.is_action_pressed("ui_2") && parked == false && button==true:
+	if Input.is_action_pressed("ui_2") && parked == false :
 		moveable = true
 	elif Input.is_action_pressed("ui_1") || Input.is_action_pressed("ui_3"): 
 		moveable = false	
