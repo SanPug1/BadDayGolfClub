@@ -6,7 +6,7 @@ var slowspeed = 0.15
 var affectedcart = ""
 
 func _ready():
-	randomize()
+	pass
 
 func _on_TurboTimer_timeout():
 	get_node("/root/main/Cart").speed = ogspeed

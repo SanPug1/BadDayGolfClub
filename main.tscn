@@ -51,7 +51,7 @@ position = Vector2( 0.324997, 0.703995 )
 scale = Vector2( 0.003, 0.003 )
 
 [node name="Events4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 0.936432, 0.791 )
+position = Vector2( 0.929291, 0.790985 )
 scale = Vector2( 0.003, 0.003 )
 
 [node name="Events5" parent="." instance=ExtResource( 6 )]
@@ -67,7 +67,7 @@ position = Vector2( 0.340714, 0.921005 )
 scale = Vector2( 0.003, 0.003 )
 
 [node name="Events8" parent="." instance=ExtResource( 6 )]
-position = Vector2( 0.202141, 0.927994 )
+position = Vector2( 0.196426, 0.936005 )
 scale = Vector2( 0.003, 0.003 )
 
 [node name="Events9" parent="." instance=ExtResource( 6 )]
@@ -79,7 +79,7 @@ position = Vector2( 0.0550003, 0.350998 )
 scale = Vector2( 0.003, 0.003 )
 
 [node name="Events11" parent="." instance=ExtResource( 6 )]
-position = Vector2( 0.940712, 0.654007 )
+position = Vector2( 0.936432, 0.654007 )
 scale = Vector2( 0.003, 0.003 )
 
 [node name="Events12" parent="." instance=ExtResource( 6 )]
@@ -107,7 +107,7 @@ position = Vector2( 0.858574, 0.242996 )
 scale = Vector2( 0.003, 0.003 )
 
 [node name="Events18" parent="." instance=ExtResource( 6 )]
-position = Vector2( 0.796417, 0.358002 )
+position = Vector2( 0.797852, 0.356003 )
 scale = Vector2( 0.003, 0.003 )
 
 [node name="Events19" parent="." instance=ExtResource( 6 )]
@@ -123,7 +123,7 @@ position = Vector2( 0.190002, 0.507996 )
 scale = Vector2( 0.003, 0.003 )
 
 [node name="Events22" parent="." instance=ExtResource( 6 )]
-position = Vector2( 0.945717, 0.332001 )
+position = Vector2( 0.94928, 0.331001 )
 scale = Vector2( 0.003, 0.003 )
 
 [node name="Events23" parent="." instance=ExtResource( 6 )]
