@@ -33,13 +33,9 @@ func _process(delta):
 	position.x = clamp(position.x,0,screen_size.x)
 	position.y = clamp(position.y,0,screen_size.y)
 		
-#	if velocity.x != 0:
-#		$AnimatedSprite.animation = "right_left"
-#		$AnimatedSprite.flip_h = velocity.x > 0
-#		$AnimatedSprite.flip_v = false
-#	elif velocity.y != 0:
-#		if velocity.y > 0:
-#			$AnimatedSprite.animation = "down"
-#		elif velocity.y < 0:
-#			$AnimatedSprite.animation = "up"
+	if velocity.x != 0:
+		$AnimatedSprite.animation = "walking"
+		$AnimatedSprite.flip_h = velocity.x > 0
+		$AnimatedSprite.flip_v = false
+
 
