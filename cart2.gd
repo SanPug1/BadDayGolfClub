@@ -7,6 +7,7 @@ var screen_size = Vector2.ZERO
 var cartSpawn = -1;
 var moveable = false;
 var parked = false
+var dirt = 0
 
 
 func _ready():

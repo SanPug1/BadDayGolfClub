@@ -16,10 +16,8 @@ extents = Vector2( 10.6702, 45.7313 )
 scale = Vector2( 1400, 1000 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = -0.00285714
-margin_top = -0.001
-margin_right = 0.997144
-margin_bottom = 0.999
+margin_right = 1.0
+margin_bottom = 1.0
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 1
@@ -142,7 +140,6 @@ scale = Vector2( 0.001, 0.001 )
 script = ExtResource( 4 )
 
 [node name="Grass" type="Area2D" parent="."]
-visible = false
 script = ExtResource( 7 )
 
 [node name="Edge" type="CollisionPolygon2D" parent="Grass"]
@@ -169,7 +166,7 @@ polygon = PoolVector2Array( 0.155, 0.271, 0.0657143, 0.426, 0.117143, 0.433, 0.1
 script = ExtResource( 8 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GameBorder"]
-polygon = PoolVector2Array( 0.330714, -0.002, 0.329286, 0.281, 0.62, 0.286, 0.619286, -0.004, 1, -0.003, 0.995714, 1.001, -0.00285714, 1.006, -0.0607143, 1.123, 1.07571, 1.117, 1.085, -0.091 )
+polygon = PoolVector2Array( 0.330714, -0.002, 0.329286, 0.281, 0.62, 0.286, 0.619286, -0.004, 1, -0.003, 1.00357, 1.004, -0.00285714, 1.006, -0.0607143, 1.123, 1.07571, 1.117, 1.085, -0.091 )
 
 [connection signal="area_shape_entered" from="Events" to="Events" method="_on_Events_area_shape_entered"]
 [connection signal="area_shape_entered" from="Events2" to="Events2" method="_on_Events2_area_shape_entered"]
@@ -203,9 +200,11 @@ polygon = PoolVector2Array( 0.330714, -0.002, 0.329286, 0.281, 0.62, 0.286, 0.61
 [connection signal="area_entered" from="Cart2" to="Grass" method="_on_Cart2_area_entered"]
 [connection signal="area_exited" from="Cart2" to="Grass" method="_on_Cart2_area_exited"]
 [connection signal="area_shape_entered" from="Cart2" to="CartReturn/CollisionShape2D" method="_on_Cart2_area_shape_entered"]
+[connection signal="area_shape_entered" from="Cart2" to="Grass" method="_on_Cart2_area_shape_entered"]
 [connection signal="area_shape_entered" from="Cart2" to="GameBorder" method="_on_Cart2_area_shape_entered"]
 [connection signal="area_shape_exited" from="Cart2" to="GameBorder" method="_on_Cart2_area_shape_exited"]
 [connection signal="area_entered" from="Cart3" to="Grass" method="_on_Cart3_area_entered"]
 [connection signal="area_exited" from="Cart3" to="Grass" method="_on_Cart3_area_exited"]
 [connection signal="area_shape_entered" from="Cart3" to="CartReturn/CollisionShape2D" method="_on_Cart3_area_shape_entered"]
+[connection signal="area_shape_entered" from="Cart3" to="Grass" method="_on_Cart3_area_shape_entered"]
 [connection signal="area_shape_entered" from="Cart3" to="GameBorder" method="_on_Cart3_area_shape_entered"]
