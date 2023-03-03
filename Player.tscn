@@ -24,16 +24,18 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32.3182, 38.1547 )
+extents = Vector2( 13.8733, 17.9974 )
 
 [node name="Cart" type="Area2D"]
 script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -7.10543e-15, 4.76837e-07 )
+scale = Vector2( 0.468354, 0.80597 )
 frames = SubResource( 2 )
-animation = "up"
+animation = "right_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.504751, 1.0048 )
+position = Vector2( -0.00244427, 13.0119 )
 rotation = 1.57557
 shape = SubResource( 1 )

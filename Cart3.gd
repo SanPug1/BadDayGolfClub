@@ -64,6 +64,4 @@ func start(new_position):
 	show()
 
 
-func _on_CollisionShape2D_returnLineTrigger():
-	hide()
-	pass # Replace with function body.
+

@@ -7,6 +7,8 @@ var screen_size = Vector2.ZERO
 var cartSpawn = -1
 var moveable = false 
 var parked = false
+var dirt = 0.1
+var mod = 1
 
 
 func _ready():
@@ -44,8 +46,8 @@ func _process(delta):
 			$AnimatedSprite.play()
 		else:
 			$AnimatedSprite.stop()
-		
-		position += velocity * speed * delta
+			
+		position += velocity * speed * delta 
 		position.x = clamp(position.x,0,screen_size.x)
 		position.y = clamp(position.y,0,screen_size.y)
 		
