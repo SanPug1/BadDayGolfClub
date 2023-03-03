@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/X2Download.app - Mario Kart Race Start - Sound Effect (HD) (128 kbps).mp3-31587939e4e403a09eca3099fb1e1fd0.mp3str"
+
+[deps]
+
+source_file="res://X2Download.app - Mario Kart Race Start - Sound Effect (HD) (128 kbps).mp3"
+dest_files=[ "res://.import/X2Download.app - Mario Kart Race Start - Sound Effect (HD) (128 kbps).mp3-31587939e4e403a09eca3099fb1e1fd0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
