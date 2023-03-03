@@ -24,3 +24,4 @@ func _pressed():
 	get_node("/root/main/Cart").button=true
 	get_node("/root/main/Cart2").button=true
 	get_node("/root/main/Cart3").button=true
+	hide()
