@@ -65,13 +65,15 @@ func _on_Cart3_area_exited(area):
 
 
 func _on_Cart_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
-
+	print(area)
 	if str(area).split(":")[0] == "Grass":
+		print("adding dirt")
 		get_node("/root/main/Cart").dirt +=1
 
 
 func _on_Cart2_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
 	if str(area).split(":")[0] == "Grass":
+		print("adding dirt")
 		get_node("/root/main/Cart2").dirt +=1
 
 
@@ -79,6 +81,5 @@ func _on_Cart2_area_shape_entered(area_rid, area, area_shape_index, local_shape_
 
 func _on_Cart3_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
 	if str(area).split(":")[0] == "Grass":
+		print("adding dirt")
 		get_node("/root/main/Cart3").dirt +=1
-
-
